@@ -17,7 +17,9 @@ class _NeuButtonState extends State<NeuButton> {
       body: Center(
         child: GestureDetector(
           onTap: () {
-            _isElevated = !_isElevated;
+            setState(() {
+              _isElevated = !_isElevated;
+            });
           },
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 200),
